@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Enjoying game prediction system</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<style>
+    body{
+    background-image:url(static/swim.jpg);
+    background-size:cover;
+    }
+</style>
+</head>
+<header class="bg-primary text white" style="padding:20px; font-size:33px;">
+<marquee>
+    Machine learning based swimming enjoy prediction system
+</marquee>
+
+</header>
+<br>
+<body>
+{% if res %}
+<table class="table">
+    <tr>
+        <td>
+            <div class="container" style="background-color:rgb(100,200,150); width:550px; height=300px; " >
+
+                <h1>{{ res }}</h1>
+            </div>
+
+        </td>
+    </tr>
+</table>
+{% endif %}
+<div class="container" style="background-color:rgb(100,200,150)">
+    <h4>Enter the details</h4>
+    <form action="/" method="post">
+        <table class="table">
+            <tr>
+                <td>
+                    <input type="text" name="sky" placeholder="sunny/rainy" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="temp" placeholder="warm/cold" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="humidity" placeholder="more/less" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="wind" placeholder="slow/fast" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="water" placeholder="cold/warm" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="forecast" placeholder="same/change" required>
+                </td>
+            </tr>
+               </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Predict" class="btn-danger" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
